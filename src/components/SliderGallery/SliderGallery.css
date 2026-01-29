@@ -1,0 +1,118 @@
+.slider-gallery {
+  .swiper-slide {
+    padding-bottom: 3.875rem;
+  }
+
+  .custom-pagination {
+    bottom: 15px !important;
+
+    @media (min-width: 990px) {
+      bottom: 0 !important;
+    }
+  }
+
+  .arrowCustom {
+    display: block;
+    position: absolute;
+    width: 3.4375rem;
+    bottom: 0;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 1);
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 1.25rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 13%;
+    margin: 0 auto;
+    border: none;
+
+    @media (min-width: 990px) {
+      width: 50px;
+      aspect-ratio: 1;
+      top: 50%;
+      transform: translateY(-50%);
+      border-radius: 50%;
+      background-repeat: no-repeat;
+      background-size: 25%;
+    }
+  }
+
+  .arrowCustom--prev {
+    background-image: url("/images/arrow-simple-prev.svg");
+    left: 0;
+
+    @media (min-width: 990px) {
+      right: calc(90%);
+    }
+  }
+
+  .arrowCustom--next {
+    background-image: url("/images/arrow-simple-next.svg");
+    right: 0;
+
+    @media (min-width: 990px) {
+      left: calc(90%);
+    }
+  }
+
+  .head {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1.875rem;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    @media (min-width: 990px) {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+
+  .head-title {
+    font-weight: 400;
+    font-family: var(--font-toyotaType-Regular);
+    line-height: 1;
+    color: inherit;
+    font-size: 1.375rem;
+
+    @media (min-width: 990px) {
+      font-size: 3.5rem;
+    }
+  }
+
+  .head-subtitle {
+    color: inherit;
+    font-family: var(--font-toyotaDisplay);
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 140%;
+  }
+
+  .slide {
+    display: grid;
+    grid-template-columns: 13.75rem 7.1875rem;
+    justify-content: center;
+    gap: 0.625rem;
+    /* padding: 1.875rem 0 2rem 0; */
+    position: relative;
+    margin: 0 auto;
+  }
+
+  .slide__column {
+    display: grid;
+    grid-template-rows: 8.5rem 12.6875rem;
+    gap: 0.5625rem;
+    height: 21.75rem;
+  }
+
+  .slide__column--secondary {
+    grid-template-rows: 12.6875rem 8.5rem;
+  }
+
+  .slide__media {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}

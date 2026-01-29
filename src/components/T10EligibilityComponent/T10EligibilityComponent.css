@@ -1,0 +1,19 @@
+/* Wrapper class to apply styles only where needed */
+.custom-checkbox .amplify-checkbox__icon {
+  /* width: 18px !important;
+    height: 18px !important; */
+  /* border: 2px solid #000 !important; */
+  /* border-radius: 2px !important; */
+  background: #000 !important;
+}
+
+/* Remove Amplify's default checkmark SVG */
+.custom-checkbox .amplify-checkbox__icon svg {
+  display: none !important;
+}
+
+/* When checked → solid black box */
+.custom-checkbox input[type="checkbox"]:checked + .amplify-checkbox__icon {
+  background: #000 !important;
+  border-color: #000 !important;
+}

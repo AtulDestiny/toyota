@@ -1,0 +1,9 @@
+.responsive-button {
+  height: 40px; /* Mobile height */
+}
+
+@media (min-width: 1024px) {
+  .responsive-button {
+    height: 50px; /* Desktop height */
+  }
+}

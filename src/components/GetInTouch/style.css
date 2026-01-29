@@ -1,0 +1,15 @@
+/* in your CSS module or global CSS */
+@media (min-width: 768px) {
+  .mobile-break {
+    display: none !important;
+  }
+
+  .seguro-toyota-ir-a-la-link {
+    width: 441px;
+  }
+}
+
+.responsiveSection {
+  height: fit-content;
+}
+

@@ -1,0 +1,18 @@
+@media (min-width: 1250px) {
+  .vehicle-card {
+    aspect-ratio: 620 / 365;
+
+    max-width: 620px;
+    max-height: 340px;
+    .vehicle-card__media {
+      /* aspect-ratio: 290 / 365; */
+    }
+
+    .vehicle-card__info {
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+  }
+}

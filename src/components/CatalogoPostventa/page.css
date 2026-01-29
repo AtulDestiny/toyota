@@ -1,0 +1,117 @@
+.tabs__item {
+  border-bottom-width: 4px;
+  --amplify-components-tabs-item-border-color: #e0e0e0 !important;
+  --amplify-components-tabs-item-active-border-color: #000000 !important;
+}
+/* Add this to your page.css file for Select component styling */
+
+.custom-select-container {
+  width: 230px !important;
+  max-width: 230px !important;
+}
+
+/* Target common select component patterns */
+.custom-select-container > *,
+.custom-select-container .select,
+.custom-select-container .select__control,
+.custom-select-container .select__value-container,
+.custom-select-container [role="combobox"],
+.custom-select-container button,
+.custom-select-container .amplify-select,
+.custom-select-container .amplify-selectfield {
+  width: 230px !important;
+  max-width: 230px !important;
+  height: 48px !important;
+  min-height: 48px !important;
+  text-align: center !important;
+}
+
+/* Target the actual select element and input if present */
+.custom-select-container select,
+.custom-select-container input {
+  width: 230px !important;
+  height: 48px !important;
+  padding: 0px 20px !important;
+  box-sizing: border-box !important;
+  text-align: center !important;
+}
+
+/* If the select has a wrapper div */
+.custom-select-container > div {
+  width: 230px !important;
+  height: 48px !important;
+}
+
+/* Target any nested elements that might control the padding and text alignment */
+.custom-select-container .select__value-container,
+.custom-select-container .select__input-container {
+  padding: 0px 20px !important;
+  text-align: center !important;
+  justify-content: center !important;
+}
+
+/* Center the displayed value text */
+.custom-select-container .select__single-value,
+.custom-select-container .select__placeholder,
+.custom-select-container .select__value,
+.custom-select-container span,
+.custom-select-container .amplify-selectfield__wrapper span {
+  text-align: center !important;
+  width: 100% !important;
+  display: block !important;
+}
+
+/* Target the specific generated class for single value */
+.custom-select-container .css-1qrxvr1-singleValue {
+  grid-area: unset !important;
+  position: absolute !important;
+  max-width: 90% !important;
+  text-align: center !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+}
+
+/* Ensure dropdown icon positioning doesn't break but stays on the right */
+.custom-select-container .select__dropdown-indicator,
+.custom-select-container .select__indicator {
+  position: absolute !important;
+  right: 15px !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+}
+
+/* Add this to your page.css file for mobile vehicle cards */
+
+/* Mobile vehicle card styling */
+@media (max-width: 1024px) {
+  .vehicle-card {
+    width: 163px !important;
+    height: 135px !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Adjust grid to center the fixed-width cards */
+  .vehicles-tabs [style*="grid-template-columns"] {
+    justify-items: center !important;
+  }
+
+  /* Set specific image dimensions */
+  .vehicle-card img {
+    width: 127px !important;
+    height: 78px !important;
+    object-fit: contain !important;
+    object-position: center !important;
+  }
+
+  /* Adjust text sizing if needed */
+  .vehicle-card h3 {
+    font-size: 0.64775rem !important;
+    line-height: 0.70663rem !important;
+  }
+
+  .vehicle-card p {
+    font-size: 0.375rem !important;
+  }
+}

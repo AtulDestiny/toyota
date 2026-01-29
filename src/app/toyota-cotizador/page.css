@@ -1,0 +1,10 @@
+/* In your CSS file */
+.mobile-break {
+  display: inline;
+}
+
+@media (min-width: 1250px) {
+  .mobile-break {
+    display: none;
+  }
+}

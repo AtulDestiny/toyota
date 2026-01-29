@@ -1,0 +1,17 @@
+/* .servicios-conectados {
+  .amplify-heading {
+    padding: 20px !important;
+  }
+} */
+
+.responsive-scale-image {
+  transform: scale(1.1) !important;
+  transform-origin: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+@media (min-width: 1024px) {
+  .responsive-scale-image {
+    transform: scale(1) !important;
+  }
+}

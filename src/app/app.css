@@ -1,0 +1,299 @@
+:root {
+  --font-decimaMonoPro: "Decima Mono Pro", monospace;
+  --font-decimaMonoProLt: "Decima Light", monospace;
+}
+
+@font-face {
+  font-family: "Decima Mono Pro";
+  src:
+    url("/fonts/DecimaMonoPro.otf"),
+    url("/fonts/DecimaMonoPro.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Decima Light";
+  src:
+    url("/fonts/DecimaMonoProLt.otf"),
+    url("/fonts/DecimaMonoProLt.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+button {
+  border: 0;
+  outline: 0;
+  box-shadow: none;
+}
+body .amplify-button:focus {
+  --amplify-internal-button-border-color: transparent !important;
+  --amplify-internal-button-color: transparent !important;
+  box-shadow: none !important;
+}
+
+.scroll--disable {
+  overflow: hidden;
+}
+*:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+.custom-select {
+  /* Temporally Commentd */
+  [class*="-control"] {
+    /* border-color: transparent !important; */
+    box-shadow: none !important;
+  }
+
+  [class*="-control"]:hover {
+    border-color: inherit !important;
+    box-shadow: none !important;
+  }
+}
+
+.custom-darkblue-button {
+  background-color: #1f2c40 !important;
+  border-color: #1f2c40 !important;
+  color: white !important;
+  display: flex;
+}
+
+.responsive-scale-image {
+  transform: scale(1.1) !important;
+  transform-origin: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+@media (min-width: 1024px) {
+  .responsive-scale-image {
+    transform: scale(1) !important;
+  }
+}
+
+.data-table,
+.data-table th,
+.data-table td,
+.data-table tr {
+  border: none !important;
+}
+.data-table th {
+  font-size: 14px;
+  font-weight: 600;
+  color: #404040;
+}
+.data-table td {
+  font-size: 14px;
+  font-weight: 400;
+  color: #58595b;
+  padding: 5px;
+}
+
+@media (min-width: 1250px) {
+  .data-table th {
+    text-align: center;
+  }
+  .data-table th:first-child {
+    text-align: left;
+  }
+}
+
+.br-hide {
+  display: block;
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+
+.bg-image-before-toyoto {
+  position: relative !important;
+  /* padding: 40px !important; */
+  z-index: 1 !important;
+}
+
+.bg-image-before-toyoto::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -23px;
+  width: 42px;
+  height: 35px;
+  background-image: url("/images/TGR/decorations.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 1; /* Adjust if needed */
+  z-index: -1;
+}
+
+.home-tabs_descubre .amplify-tabs__item {
+  margin-bottom: 0;
+}
+.home-tabs_descubre .amplify-tabs__item--active {
+  color: #fff !important;
+}
+.home-tabs_descubre .amplify-tabs__item::after {
+  background-color: #58595b;
+}
+.home-tabs_descubre .amplify-tabs__item--active::after {
+  background-color: #fff;
+}
+.home-tabs_descubre .tabs-no-scrollbar {
+  overflow-x: visible !important;
+}
+
+.homeSlider-racing .custom-pagination {
+  max-width: min(76.25rem, 80%);
+  margin: 0 auto;
+  padding: 0 !important;
+
+  @media (min-width: 1249px) {
+    bottom: 0 !important;
+  }
+}
+
+.Gallery_lightbox__pDaN6 {
+  z-index: 9999999999999 !important;
+}
+@media (max-width: 768px) {
+  .image-gallery-grid:last-child {
+    height: auto !important;
+  }
+}
+
+#cn-digital-form-app {
+  z-index: 99999 !important;
+  position: relative;
+}
+
+#cn-widget .cn-widget-button {
+  display: none !important;
+}

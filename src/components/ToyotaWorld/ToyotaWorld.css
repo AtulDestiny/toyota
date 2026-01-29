@@ -1,0 +1,66 @@
+.ToyotaWorld__tabs.amplify-tabs .amplify-tabs__list {
+  border: none;
+}
+
+.amplify-tabs__list {
+  width: min(90%, 1250px);
+  overflow-x: auto;
+  overflow-y: hidden;
+  margin: 0 auto;
+  padding: 0 16px !important;
+  border: 0;
+}
+.amplify-tabs__item {
+  position: relative;
+  font-size: 18px;
+  font-weight: 400;
+  font-family: var(--font-ToyotaType-Regular);
+  vertical-align: middle;
+  color: #58595b;
+  border: 0;
+}
+.amplify-tabs__item::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 4px;
+  width: 100%;
+  background-color: #e0e0e0;
+}
+
+.amplify-tabs__item--active {
+  color: #000 !important;
+}
+
+.amplify-tabs__item--active::after {
+  height: 4px;
+  background-color: #000000;
+  border-radius: 10px;
+}
+
+.Toyotatabs .amplify-tabs__list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+@media (max-width: 768px) {
+  .Toyotatabs.amplify-tabs .amplify-tabs__list {
+    display: grid;
+    grid-auto-flow: column;
+    overflow-x: auto;
+    overflow-y: hidden;
+    max-width: 100%;
+  }
+  .Toyotatabs.amplify-tabs .amplify-tabs__item {
+    min-width: max-content !important;
+    font-size: 14px;
+    max-height: 100%;
+  }
+  .Toyotatabs.amplify-tabs .amplify-tabs__item::after {
+    height: 3px;
+  }
+  .Toyotatabs.amplify-tabs .amplify-tabs__item--active::after {
+    height: 3px;
+  }
+}

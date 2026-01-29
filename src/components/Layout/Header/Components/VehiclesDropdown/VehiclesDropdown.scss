@@ -1,0 +1,11 @@
+.tabs__item {
+  border-bottom-width: 4px;
+  --amplify-components-tabs-item-border-color: #e0e0e0;
+  --amplify-components-tabs-item-active-border-color: #000000;
+}
+
+.amplify-tabs__item--active::after {
+  height: 4px;
+  background-color: #000000;
+  border-radius: 10px;
+}

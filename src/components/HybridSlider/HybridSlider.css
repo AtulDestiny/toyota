@@ -1,0 +1,62 @@
+.hybrid-Slider-slider-container {
+  width: 345px;
+  margin: auto;
+}
+
+.hybrid-slider {
+  padding: 30px;
+}
+
+.hybridSlider-slide-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: var(--Blanco-principal, #ffffff);
+  padding: 20px 30px;
+  border-radius: 10px;
+  border: 30px solid #1f2c40; /* Blue border */
+  width: 285px;
+}
+
+.hybrid-slider .slide-image {
+  position: relative;
+  margin-right: 92px;
+  width: 80px;
+  height: 80px;
+  aspect-ratio: 1/1;
+  object-fit: contain;
+  margin-bottom: 20px;
+}
+
+.slide-content h2 {
+  font-family: var(--font-ToyotaType-Bold);
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 28px;
+  text-align: center;
+  width: 225px;
+  height: 168px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(
+    --Negro-principal,
+    linear-gradient(180deg, #000 0%, #000 100%)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.slide-content h3 {
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.slide-content p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+}

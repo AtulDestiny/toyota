@@ -1,0 +1,40 @@
+.test-drive__datepicker {
+  .react-datepicker-wrapper {
+    min-width: 100%;
+  }
+
+  .date-picker-custom-wrapper .react-datepicker__input-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 7.5rem;
+    padding: 0 1rem;
+    min-height: 40px;
+    cursor: pointer;
+  }
+  @media (min-width: 1028px) {
+    .date-picker-custom-wrapper .react-datepicker__input-container {
+      padding: 0 0.625rem;
+    }
+  }
+
+  .date-picker-custom-wrapper .react-datepicker__calendar-icon {
+    order: 1;
+    left: auto !important;
+    right: 0.5rem;
+    pointer-events: none;
+  }
+
+  .date-picker-custom-input {
+    padding: 2px 8px !important;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+    font-family: var(--font-toyotaDisplay);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 120%;
+    letter-spacing: 0%;
+  }
+}

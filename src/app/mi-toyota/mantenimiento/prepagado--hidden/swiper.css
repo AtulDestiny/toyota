@@ -1,0 +1,40 @@
+.mantenimiento-prepagado__benefits .swiper {
+  @media (min-width: 48rem) {
+    width: min(57.0625rem, 100%) !important;
+  }
+}
+
+.mantenimiento-prepagado__benefits .swiper-wrapper {
+  @media (min-width: 48rem) {
+    justify-content: center;
+  }
+}
+
+.mantenimiento-prepagado__benefits .swiper-slide {
+  @media (min-width: 48rem) {
+    width: auto !important;
+  }
+}
+
+.custom-pagination--mantenimiento-prepagado-benefits {
+  display: flex;
+  justify-content: center;
+  margin-top: 4rem;
+  gap: 0.3962rem;
+
+  @media (min-width: 48rem) {
+    display: none;
+  }
+}
+
+.custom-pagination--mantenimiento-prepagado-benefits .swiper-pagination-bullet {
+  flex: 1;
+  border-radius: 2.5rem;
+  height: 0.1869rem;
+  background-color: #58595b;
+  margin: 0;
+}
+.custom-pagination--mantenimiento-prepagado-benefits
+  .swiper-pagination-bullet-active {
+  background-color: #ffffff;
+}

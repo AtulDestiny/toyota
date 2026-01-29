@@ -1,0 +1,32 @@
+.shortcuts {
+  z-index: 2 !important;
+}
+
+@media (max-width: 768px) {
+  .diferenciales-slider .slider-inner {
+    background-color: transparent !important;
+    padding: 1.875rem 1.875rem 30px !important;
+  }
+
+  .diferenciales-slider .slider-inner .amplify-image {
+    object-fit: cover !important;
+  }
+}
+
+@media (min-width: 1700px) {
+  .diferenciales-slider.slider-section .arrowCustom--next {
+    right: 5% !important;
+  }
+  .diferenciales-slider.slider-section .arrowCustom--prev {
+    left: 5% !important;
+  }
+}
+@media (min-width: 1250px) {
+  .diferenciales-slider.slider-section .custom-pagination {
+    min-height: 100%;
+    max-height: 640px;
+    max-width: min(76.25rem, 80%);
+    min-width: min(76.25rem, 80%);
+    padding: 0;
+  }
+}

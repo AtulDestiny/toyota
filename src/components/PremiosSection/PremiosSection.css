@@ -1,0 +1,23 @@
+@media (max-width: 767px) {
+  .awardsCards .awardsCard:first-child,
+  .awardsCards .awardsCard:nth-of-type(3) {
+    align-self: self-start;
+  }
+  .awardsCards .awardsCard:nth-of-type(2),
+  .awardsCards .awardsCard:nth-of-type(4) {
+    align-self: self-end;
+    margin-top: -60px;
+  }
+}
+
+@media (min-width: 768px) {
+  .awardsCards .awardsCard:first-child,
+  .awardsCards .awardsCard:nth-of-type(3) {
+    align-self: self-start;
+  }
+  .awardsCards .awardsCard:nth-of-type(2),
+  .awardsCards .awardsCard:nth-of-type(4) {
+    align-self: self-end;
+    margin-top: 60px;
+  }
+}

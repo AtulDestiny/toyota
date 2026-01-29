@@ -1,0 +1,24 @@
+.all-vehicles-cars-grid {
+  .css-6ol87r-indicatorContainer {
+    padding: 0.3125rem;
+  }
+
+  .css-4tobca-control:hover {
+    border-color: black;
+  }
+
+  .all-vehicles-cars-grid__sort {
+    .css-4tobca-control {
+      padding: 0.4063rem 0.625rem 0.4063rem 0.125rem;
+    }
+
+    .css-6ol87r-indicatorContainer {
+      padding: 0;
+    }
+
+    .css-hlgwow {
+      padding: 0;
+      overflow: unset;
+    }
+  }
+}

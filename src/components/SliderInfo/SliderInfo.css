@@ -1,0 +1,130 @@
+.slider-info {
+  .head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: start;
+    padding-bottom: 0;
+
+    @media (min-width: 990px) {
+      flex-direction: column;
+      padding-bottom: 1.87rem;
+      text-align: center;
+    }
+  }
+
+  .head-title {
+    font-weight: 400;
+    font-family: var(--font-toyotaType-Regular);
+    line-height: 1;
+    color: inherit;
+    text-align: center;
+    font-size: 1.375rem;
+
+    @media (min-width: 990px) {
+      font-size: 3.5rem;
+    }
+
+    @media (min-width: 1250px) {
+      max-width: 15ch;
+    }
+  }
+
+  .head-subtitle {
+    color: inherit;
+    text-align: center;
+    font-family: var(--font-toyotaDisplay);
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 140%;
+  }
+
+  .slide {
+    padding: 1.875rem 1.875rem 63px 1.875rem;
+    margin: auto;
+    position: relative;
+
+    @media (min-width: 990px) {
+      max-width: min(76.25rem, 80%);
+    }
+  }
+
+  .slide__body {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    width: 100%;
+    flex: 0 0 100%;
+    margin: 0;
+    max-width: auto;
+    gap: 0;
+
+    @media (min-width: 990px) {
+      flex-direction: row;
+    }
+  }
+  .slider__banner-image {
+    width: 100%;
+
+    @media (min-width: 990px) {
+      width: 48%;
+    }
+  }
+
+  .slide__content {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 1.62rem;
+    padding: 1.31rem 1.31rem 1.56rem 1.87rem;
+    color: #000;
+
+    @media (min-width: 990px) {
+      width: 52%;
+    }
+  }
+
+  .slide__content-title {
+    font-size: 1.375rem;
+    font-weight: 700;
+    text-align: start;
+    font-family: var(--font-toyotaText);
+
+    @media (min-width: 990px) {
+      font-size: 1.625rem;
+    }
+  }
+
+  .slide__content-text {
+    font-size: 0.75rem;
+    font-weight: 400;
+    font-family: var(--font-toyotaType-Regular);
+
+    @media (min-width: 990px) {
+      font-size: 1.375rem;
+    }
+  }
+}
+/* 
+  <Flex
+    textAlign={{ base: "start", large: "center" }}
+    direction={{
+      base: "column",
+      large: "column",
+    }}
+    alignItems={"center"}
+    paddingBottom={{ base: "0", large: "1.87rem" }}
+  >
+    <Heading
+      level={2}
+      fontSize={{ base: "0.875rem", large: "3.5rem" }}
+      fontWeight={400}
+      fontFamily="var(--font-toyotaDisplay)"
+      lineHeight={"140%"}
+      maxWidth={{ large: "15ch" }}
+      color={"inherit"}
+    >
+      {data.title}
+    </Heading>
+  </Flex>
+ */

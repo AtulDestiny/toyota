@@ -1,0 +1,19 @@
+.vin-input {
+  &:focus {
+    border: 1px solid #fff;
+    box-shadow: none;
+  }
+  &::placeholder {
+    color: white;
+  }
+}
+
+li{
+    list-style: circle;
+    margin-left: 1rem;
+    margin-bottom: 0.7rem;
+}
+
+strong{
+  font-weight: bold;
+}

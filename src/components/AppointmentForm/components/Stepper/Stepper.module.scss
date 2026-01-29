@@ -1,0 +1,138 @@
+.stepperContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 684px;
+  margin: 0 auto;
+}
+
+.stepIndicators {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+
+  @media (max-width: 768px) {
+    margin-bottom: 0;
+  }
+}
+
+.stepIndicator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  position: relative;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+
+  &:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 2rem;
+    left: 60%;
+    width: 80%;
+    height: 2px;
+    background-color: #ddd;
+
+    @media (max-width: 768px) {
+      top: 1.5rem;
+    }
+  }
+
+  &.active .stepNumber {
+    background-color: #d42224;
+    color: white;
+  }
+
+  &.completed .stepNumber {
+    background-color: #d42224;
+    color: white;
+  }
+}
+
+.stepNumber {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+  font-size: 24px;
+  z-index: 1;
+  font-family: var(--font-ToyotaDisplay);
+
+  @media (max-width: 768px) {
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+  }
+}
+
+.stepTitle {
+  font-size: 0.875rem;
+  color: white;
+  text-align: center;
+  font-family: var(--font-ToyotaType-Regular);
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.stepContent {
+  min-height: 200px;
+}
+
+.stepperActions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+
+  @media (max-width: 768px) {
+    gap: 0.5rem;
+  }
+}
+
+.backButton,
+.nextButton {
+  padding: 0.75rem 1.5rem;
+  border-radius: 100px;
+  border: none;
+  cursor: pointer;
+  height: 50px;
+  width: 291px;
+  font-size: 14px;
+}
+
+.backButton {
+  background-color: #f8f9fa;
+  color: #161B1E;
+
+  &:hover {
+    background-color: #e2e6ea;
+  }
+}
+
+.nextButton {
+  background-color: #d42224;
+  color: white;
+  margin-left: auto;
+
+  @media (max-width: 768px) {
+    margin-right: auto;
+  }
+
+  &:hover {
+    background-color: #d42224;
+  }
+
+  &:disabled {
+    background-color: #d42224;
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}

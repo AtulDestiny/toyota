@@ -1,0 +1,9 @@
+.blog-main-image {
+    object-fit: cover;
+}
+
+@media (min-width:1280px) {
+    .blog-main-image {
+        object-fit: contain !important;
+    }
+}

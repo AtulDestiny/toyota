@@ -1,0 +1,38 @@
+.marketplaceUsedDialog {
+  z-index: 999999 !important;
+}
+
+.marketplaceUsedDialogOpen {
+  display: flex;
+}
+
+.marketplaceUsedDialogClose {
+  display: none;
+}
+.mobile-res {
+  display: flex;
+  flex-wrap: wrap;
+}
+.tabs__item {
+  border-bottom-width: 4px !important;
+  --amplify-components-tabs-item-border-color: #f6f6f6 !important;
+  --amplify-components-tabs-item-active-border-color: #d42224 !important;
+  width: 135px;
+}
+
+@media (max-width: 768px) {
+  .amplify-checkbox__button::before {
+    min-width: 24px !important;
+    min-height: 24px !important;
+  }
+  .mobile_res {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .tabs__item {
+    border-bottom-width: 4px !important;
+    --amplify-components-tabs-item-border-color: #f6f6f6 !important;
+    --amplify-components-tabs-item-active-border-color: #d42224 !important;
+    width: 101.5px;
+  }
+}

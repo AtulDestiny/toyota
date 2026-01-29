@@ -1,0 +1,39 @@
+.amplify-accordion {
+  background-color: transparent;
+}
+
+.amplify-accordion__item__trigger:hover {
+  background-color: transparent;
+}
+
+.amplify-accordion__item__trigger:focus {
+  box-shadow: none;
+}
+
+.amplify-accordion__item .amplify-icon svg {
+  visibility: hidden;
+}
+
+.amplify-accordion__item[open] .amplify-accordion__item__icon {
+  transform: none;
+}
+
+@media (max-width: 768px) {
+  .amplify-accordion__item__icon {
+    margin-right: 10px;
+  }
+}
+
+.amplify-accordion__item .amplify-icon {
+  background-image: url("/images/icons/plus.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.amplify-accordion__item[open] .amplify-icon {
+  background-image: url("/images/icons/minus.svg");
+}
+
+a {
+  text-decoration: none;
+}

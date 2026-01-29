@@ -1,0 +1,51 @@
+.card {
+  width: 100% !important;
+  height: auto !important;
+  padding: 30px !important;
+  background-color: #f6f6f6 !important;
+  border-radius: 0.1375rem !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  text-align: center !important;
+  transition: all 0.3s ease !important;
+
+  @media (max-width: 900px) {
+    padding: 15px !important;
+  }
+
+  &.lastCard {
+    grid-column: span 2 !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    align-items: center !important;
+    .icon {
+      width: 20px !important;
+      height: auto !important;
+    }
+    .title {
+      margin-top: -4px !important;
+    }
+    .description {
+      max-width: 40% !important;
+    }
+  }
+}
+
+.icon {
+  width: auto !important;
+  height: 30px !important;
+  object-fit: contain !important;
+  @media (max-width: 900px) {
+    height: 17px !important;
+  }
+}
+
+.title {
+  color: #212c3f !important;
+  margin-top: 0.625rem !important;
+  @media (max-width: 900px) {
+    margin-top: 0px !important;
+  }
+}

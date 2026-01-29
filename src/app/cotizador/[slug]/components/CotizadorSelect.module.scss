@@ -1,0 +1,35 @@
+.selectBox {
+  background-color: #fff;
+  border-radius: 80px;
+  border: none;
+  color: #58595b;
+  font-size: 14px;
+  font-family: var(--font-ToyotaDisplay);
+  padding: 10px 23px;
+  appearance: none;
+  background-image: url("/images/icons/arrow--down--grey.svg");
+  background-repeat: no-repeat;
+  background-position: right 18px center;
+  outline: none;
+  max-width: 444px;
+  width: 100%;
+  cursor: pointer;
+
+  /* Style hover/selected options */
+  option {
+    background-color: #fff;
+    color: #000;
+  }
+
+  option:hover,
+  option:focus,
+  option:checked {
+    background-color: #000 !important; /* Black on hover/selected */
+    color: #fff !important;
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+}

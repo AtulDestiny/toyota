@@ -1,0 +1,32 @@
+.item {
+  background-color: #ffffff;
+  height: 12.5rem;
+  transition: all ease 0.2s;
+  cursor: pointer;
+
+  &:nth-child(even) {
+    background-color: #f6f6f6;
+  }
+
+  &:hover {
+    height: 14.6875rem;
+  }
+
+  @media (min-width: 61.875rem) {
+    height: 100%;
+
+    &:nth-child(2n + 5),
+    &:nth-child(2n + 7) {
+      background-color: #f6f6f6;
+    }
+
+    &:nth-child(2n + 6),
+    &:nth-child(2n + 8) {
+      background-color: #ffffff;
+    }
+
+    &:hover {
+      height: 100%;
+    }
+  }
+}

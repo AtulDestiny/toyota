@@ -1,0 +1,54 @@
+.tgr-page {
+  background-color: #000;
+
+  .tabpanel {
+    background-color: #000 !important;
+  }
+  .ToyotaWorldcontainer {
+    margin: 82px 0 0 0 !important;
+  }
+
+  .ToyotaWorld__container {
+    margin: 0 !important;
+    background-color: #000 !important;
+  }
+
+  .swiper-pagination-bullet {
+    @media only screen and (max-width: 600px) {
+      display: none !important;
+    }
+  }
+
+  .amplify-tabs__panel {
+    padding: 0 !important;
+  }
+
+  .custom-slider-container .swiper {
+    @media only screen and (max-width: 600px) {
+      height: 80vh !important;
+    }
+  }
+
+  .amplify-tab {
+    font-weight: normal !important;
+  }
+
+  .amplify-tabs__list {
+    padding-top: 82px;
+    background-color: #000 !important;
+    justify-content: center !important;
+  }
+
+  .amplify-tabs__item {
+    color: #fff !important;
+    font-weight: normal !important;
+  }
+
+  .amplify-tabs__item--active {
+    border-color: #d42224 !important;
+  }
+
+  .tgr-footer {
+    border-top: 1px solid #58595b !important;
+  }
+}

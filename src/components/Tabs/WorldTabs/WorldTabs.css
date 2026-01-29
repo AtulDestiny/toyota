@@ -1,0 +1,23 @@
+.world__tabs__item {
+  border-bottom-width: 4px;
+  --amplify-components-tabs-item-border-color: #58595b;
+  --amplify-components-tabs-item-active-border-color: #f6f6f6;
+}
+.tabs-no-scrollbar {
+  display: flex;
+  justify-content: flex-start;
+  overflow-x: auto; /* Habilita scroll horizontal */
+  white-space: nowrap; /* Evita el salto de línea */
+  -ms-overflow-style: none; /* Oculta la barra en IE y Edge */
+  scrollbar-width: none; /* Oculta la barra en Firefox */
+}
+
+.tabs-no-scrollbar::-webkit-scrollbar {
+  display: none; /* Oculta la barra en Chrome, Safari y Edge */
+}
+
+/* @media screen and (min-width: 1024px) {
+  .world__tabs__item {
+    padding: 0 !important;
+  }
+} */

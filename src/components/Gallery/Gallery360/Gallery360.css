@@ -1,0 +1,38 @@
+.gallery360__year {
+  .css-efod8n-control {
+    padding-left: 0;
+
+    @media (min-width: 80rem) {
+      padding-left: 1rem;
+    }
+  }
+
+  .css-gsfzmz-control {
+    padding-left: 0;
+
+    @media (min-width: 80rem) {
+      padding-left: 1rem;
+    }
+  }
+
+  .css-hlgwow {
+    padding-left: 0;
+    padding: 2px;
+
+    @media (min-width: 80rem) {
+      padding-left: 0.5rem;
+    }
+  }
+}
+
+.custom-select div[class*="-IndicatorsContainer"] {
+  padding-left: 0px !important;
+}
+
+.custom-select div[class*="-indicatorContainer"] {
+  padding: 0px !important;
+}
+
+.css-pjbozy-menu{
+  width: 100px !important;
+}

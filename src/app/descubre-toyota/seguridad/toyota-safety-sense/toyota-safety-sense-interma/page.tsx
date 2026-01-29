@@ -1,0 +1,450 @@
+"use client";
+
+import React from "react";
+import renderComponent from "@/utils/renderComponent";
+import BulletListInfo from "./ListInfo";
+
+interface ComponentData {
+  component: string;
+  props?: Record<string, unknown>;
+  children?: (ComponentData | string)[];
+}
+
+// Datos de prueba
+const pageData: ComponentData[] = [
+  {
+    component: "MainSlider", // Component name
+    props: {
+      slides: [
+        {
+          imageMobile: "/images/Captura de pantalla-break-assist.png",
+          imageDesktop: "/images/Captura de pantalla-break-assist.png",
+          title: "Sistema de pre-colisión frontal (PCS)*",
+        },
+        {
+          imageMobile: "/images/Captura de pantalla-break-assist.png",
+          imageDesktop: "/images/Captura de pantalla-break-assist.png",
+          title: "Sistema de pre-colisión frontal (PCS)*",
+        },
+      ], // Passing slides data inline
+      sliderConfig: {
+        slidesPerView: 1, // Number of slides visible at a time
+        spaceBetween: 10, // Space between slides
+        loop: true, // Infinite loop of slides
+        isButton: false,
+        autoplay: {
+          delay: 3000, // Autoplay delay in ms
+          disableOnInteraction: false, // Keep autoplay even when user interacts
+        },
+        pagination: {
+          clickable: true, // Allow click pagination
+        },
+        navigation: true, // Enable navigation buttons (next/prev)
+      }, // Passing slider configuration inline
+    },
+  },
+
+  // make PreventiveCampaignsServicesBanner component to accept dynamic props
+  // {
+  //   component: "PreventiveCampaignsServicesBanner",
+  //   props: {
+  //     slides: [
+  //       {
+  //         imageMobile: "/images/Captura de pantalla.png",
+  //         imageDesktop: "/images/Captura de pantalla.png",
+  //         title: "Toyota Safety Sense",
+
+  //       },
+  //       // ... more slides
+  //     ],
+  //   },
+  // },
+  {
+    component: "AWSAmplifyComponent",
+    props: {
+      layout: "horizontal",
+      title: {
+        text: `Sistema de Pre-colisión frontal (PCS)*`,
+        fontSize: {
+          base: "14px",
+          medium: "14px",
+          xl: "14px",
+        },
+        lineHeight: {
+          base: "19.6px",
+          medium: "normal",
+          xl: "19.6px",
+        },
+        fontFamily: {
+          base: "var(--font-toyotaDisplay)",
+          medium: "var(--font-toyotaDisplay)",
+          xl: "var(--font-ToyotaType-Regular)",
+        },
+        fontWeight: "400",
+        fontStyle: "normal",
+        textAlign: {
+          base: "left",
+          medium: "center",
+          xl: "center",
+        },
+        padding: {
+          base: " 0px 16px 0px 15px",
+          medium: "",
+          xl: "",
+        },
+        margin: {
+          base: "35px 0 0px 0",
+          medium: "",
+          xl: "124px 0px 13px",
+        },
+        color: "",
+      },
+      viewstyle: {
+        display: "flex",
+        flexDirection: { base: "column", xl: "row" },
+        alignItems: "center",
+        justifyContent: "center",
+        width: {
+          base: "100%",
+          medium: "",
+          xl: "100%",
+        },
+        maxHeight: {
+          base: "auto",
+          medium: "450px",
+          xl: "450px",
+        },
+
+        padding: {
+          base: "",
+          medium: "",
+          xl: "0 30px",
+        },
+        margin: {
+          base: "auto",
+          medium: "",
+          xl: "auto",
+        },
+      },
+    },
+  },
+  {
+    component: "AWSAmplifyComponent",
+    props: {
+      layout: "horizontal",
+      title: {
+        text: `Para ayudar a prevenir y evitar colisiones`,
+        fontSize: {
+          base: "56px",
+          medium: "26px",
+          xl: "56px",
+        },
+        lineHeight: {
+          base: "110%",
+          medium: "normal",
+          xl: "61.6px",
+        },
+        fontFamily: {
+          base: "var(--font-ToyotaType-Regular)",
+          medium: "var(--font-toyotaDisplay)",
+          xl: "var(--font-ToyotaType-Regular)",
+        },
+        fontWeight: {
+          base: "400",
+          medium: "400",
+          xl: "400",
+        },
+        fontStyle: "normal",
+        textAlign: {
+          base: "left",
+          medium: "center",
+          xl: "center",
+        },
+        padding: {
+          base: "",
+          medium: "",
+          xl: "",
+        },
+        letterSpacing: {
+          base: "-1.12px",
+          medium: "",
+          xl: "-1.12px",
+        },
+        margin: {
+          base: "35px 16px 0px 16px",
+          medium: "",
+          xl: "0 auto",
+        },
+        verticalAlign: "middle",
+        color: "",
+      },
+      description: {
+        text: `Este manual es el resultado de nuestra preocupación por asegurar el bienestar de nuestros clientes y generar una motivación a reflexionar sobre las buenas prácticas de conducción con el fin de disminuir la accidentalidad. No basta con tener vehículos cada día más seguros, también es necesario conductores y peatones conscientes de su rol en las vías.`,
+        fontSize: { base: "18px", medium: "12px", xl: "22px" },
+        fontFamily: {
+          base: "var(--font-ToyotaType-Regular)",
+          medium: "var(--font-ToyotaType-Regular)",
+          xl: "var(--font-ToyotaType-Regular)",
+        },
+        fontStyle: {
+          base: "normal",
+          medium: "normal",
+          xl: "normal",
+        },
+        width: {
+          base: "",
+          medium: "",
+          xl: "100%",
+        },
+        fontWeight: {
+          base: "400",
+          medium: "400",
+          xl: "400",
+        },
+        textAlign: {
+          base: "left",
+          medium: "center",
+          xl: "center",
+        },
+        lineHeight: {
+          base: "normal",
+          medium: "normal",
+          xl: "normal",
+        },
+        margin: {
+          base: "57px 0 48px 0",
+          medium: "",
+          xl: "0 auto 87px",
+        },
+
+        padding: {
+          base: "0 16px 0px 16px",
+          medium: "",
+          xl: "56px 201px",
+        },
+      },
+      viewstyle: {
+        display: "flex",
+        flexDirection: { base: "column", xl: "row" },
+        alignItems: "center",
+        justifyContent: "center",
+        width: {
+          base: "",
+          medium: "",
+          xl: "100%",
+        },
+        maxHeight: {
+          base: "auto",
+          medium: "450px",
+          xl: "450px",
+        },
+        padding: {
+          base: "",
+          medium: "",
+          xl: "0 30px",
+        },
+        margin: {
+          base: "auto",
+          medium: "",
+          xl: "auto",
+        },
+      },
+    },
+  },
+
+  // Update Slider to accept dynamic props : Cuando el sistema detecta un
+  {
+    component: "PreventiveCampaignsServicesSlider",
+    props: {
+      title: "",
+      items: [
+        {
+          image: {},
+          title: "",
+          description: {
+            intro:
+              "Cuando el sistema detecta un riesgo de colisión, enviará alertas visuales y auditivas al conductor.",
+            list: [],
+          },
+        },
+        {
+          image: {},
+          title: "",
+          description: {
+            intro:
+              "Cuando el sistema detecta un riesgo de colisión, enviará alertas visuales y auditivas al conductor.",
+            list: [],
+          },
+        },
+        // ... more items
+      ],
+      maxwidth:{xl:"1220px"},
+      margin:{xl:"0 auto"},
+      backgroundColor:"#1F2C40"
+    },
+  },
+
+  {
+    component: "ToyotaWorld",
+    props: {
+      items: [
+        {
+          label: "Precauciones",
+          value: "Precauciones",
+          content: (
+            <>
+              <BulletListInfo />
+            </>
+          ),
+        },
+        {
+          label: "Importante",
+          value: "Importante",
+          content: (
+            <>
+              <BulletListInfo />
+            </>
+          ),
+        },
+      ],
+      defaultValue: "Precauciones",
+      // margin:"13px 0px 105px"
+    },
+  },
+
+  //add here tabs components : tab 1 :  Precauciones , tab2 :Importante
+
+  //Update SliderSection component to accept dynamic props and Update Slider props to match data with figma design : Cuando el sistema detecta un:  Slider Conoce más Características de Toyota Safety Sense to
+  {
+    component: "SliderSection",
+    props: {
+      theme: "#000", // or "light" depending on your design
+      color: "#fff",
+      title: "Conoce más Características de Toyota Safety Sense",
+      customFontHeading:"14px",
+      Headingpadding:"46px 87px 50px",
+      imagePadding:"30px 0px 0px",
+      // description:
+      //   "Explore our efforts to promote diversity, equity, and inclusion through powerful community-driven projects.",
+      items: [
+        {
+          image: {
+            src: "/images/car_moving_zig_zag.png",
+            alt: "Breast Cancer Awareness Campaign",
+          },
+          title: "Sistema de alerta de cambio de carril (LDA)*",
+          description:
+            "El sistema puede detectar las líneas del carril para determinar la posición del vehículo. Si el conductor se desvía involuntariamente de su...",
+        },
+        {
+          image: {
+            src: "/images/car_moving_zig_zag.png",
+            alt: "Breast Cancer Awareness Campaign",
+          },
+          title: "Sistema de alerta de cambio de carril (LDA)*",
+          description:
+            "El sistema puede detectar las líneas del carril para determinar la posición del vehículo. Si el conductor se desvía involuntariamente de su...",
+        },
+        {
+          image: {
+            src: "/images/car_moving_zig_zag.png",
+            alt: "Breast Cancer Awareness Campaign",
+          },
+          title: "Sistema de alerta de cambio de carril (LDA)*",
+          description:
+            "El sistema puede detectar las líneas del carril para determinar la posición del vehículo. Si el conductor se desvía involuntariamente de su...",
+        },
+      ],
+    },
+  },
+  {
+    component: "AWSAmplifyComponent",
+    props: {
+      layout: "horizontal",
+      description: {
+        text: `* Toyota Safety Sense, integra diferentes sistemas de seguridad activa que pueden variar según cada modelo y/o versión. A su vez, estos sistemas están diseñados para asistir al conductor, no para sustituirlo. El conductor debe mantener en todo momento el control de su vehículo y es responsable de su conducción, por cuanto este sistema no remplaza la conducción segura. El correcto funcionamiento del Toyota Safety Sense depende de muchos factores incluyendo las condiciones del camino, el clima y el vehículo, razón por la cual el/los sistemas podrán verse afectados u obstaculizados debido a factores externos, no siendo Toyota Argentina S.A. responsable de las consecuencias derivadas del uso del sistema. Para más información sobre Toyota Safety Sense, su funcionamiento y sus limitaciones, dirigirse a la web toyota.com.ar y/o consulte el manual de usuario.`,
+        fontSize: { base: "9px", medium: "12px", xl: "12px" },
+        fontFamily: {
+          base: "var(--font-ToyotaType-Regular)",
+          medium: "var(--font-ToyotaType-Regular)",
+          xl: "var(--font-ToyotaType-Regular)",
+        },
+        fontStyle: {
+          base: "normal",
+          medium: "normal",
+          xl: "normal",
+        },
+        width: {
+          base: "",
+          medium: "",
+          xl: "100%",
+        },
+        fontWeight: {
+          base: "400",
+          medium: "400",
+          xl: "400",
+        },
+        textAlign: {
+          base: "left",
+          medium: "center",
+          xl: "center",
+        },
+        lineHeight: {
+          base: "normal",
+          medium: "normal",
+          xl: "normal",
+        },
+        // padding: "38px 16px 0",
+        padding: {
+          base: "0 16px 0px 16px",
+          medium: "10px 0px 0px 0px",
+          xl: "0px 250px",
+        },
+        margin: {
+          base: "22.01px 0 22px 0",
+          medium: "",
+          xl: "72px auto 112px",
+        },
+      },
+      viewstyle: {
+        display: "flex",
+        flexDirection: { base: "column", xl: "row" },
+        alignItems: "center",
+        justifyContent: "center",
+        width: {
+          base: "",
+          medium: "",
+          xl: "100%",
+        },
+        maxHeight: {
+          base: "auto",
+          medium: "450px",
+          xl: "450px",
+        },
+
+        padding: {
+          base: "",
+          medium: "",
+          xl: "0 30px",
+        },
+        margin: {
+          base: "auto",
+          medium: "",
+          xl: "auto",
+        },
+      },
+    },
+  },
+];
+
+export default function Home() {
+  return (
+    <div>
+      {pageData.map((componentData, index) => (
+        <React.Fragment key={index}>
+          {renderComponent(componentData)}
+        </React.Fragment>
+      ))}
+    </div>
+  );
+}

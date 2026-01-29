@@ -1,0 +1,117 @@
+.concessionaire-search .Card {
+  background-image: url("/images/ConcessionaireSearch--bg-mobile.png");
+  width: 100%;
+  margin: 0px auto;
+  padding: 3.125rem 0.9375rem 3.625rem;
+
+  @media (width >= 768px) {
+    padding: 6.125rem 9.375rem;
+  }
+
+  @media (width >= 1024px) {
+    width: 95%;
+  }
+}
+
+.concessionaire-search {
+  padding: 0;
+  color: white;
+
+  color: var(--amplify-colors-white);
+  @media (width >= 1024px) {
+    padding: 5rem;
+  }
+}
+.concessionaire-search .amplify-select {
+  color: white;
+  border-radius: 7.5rem;
+  background-color: transparent;
+  border: 1px solid white;
+}
+
+.concessionaire-search .amplify-select__icon {
+  color: white;
+}
+
+.css-19bozrk-placeholder {
+  line-height: 16.8px;
+}
+
+.concessionaire-search .amplify-select option {
+  color: black;
+  width: 100%;
+}
+.concessionaire-search .amplify-select:active,
+.concessionaire-search .amplify-select:focus,
+.concessionaire-search .amplify-select:focus-visible {
+  border-color: white;
+  box-shadow: none;
+}
+
+.concessionaire-search .amplify-grid {
+  grid-template-columns: auto 27.75rem;
+  gap: 1.875rem;
+}
+
+.concessionaire-search .concessionaire-search__title {
+  grid-column: 1 / 2;
+  color: inherit;
+  font-size: 2rem;
+  line-height: 110%;
+  font-weight: 400;
+  font-family: var(--font-toyotaDisplay);
+  letter-spacing: 0px;
+  max-width: 18ch;
+  margin-bottom: 1rem;
+  @media (width >= 1024px) {
+    padding: 0;
+  }
+}
+
+.concessionaire-search__select-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.concessionaire-search_select {
+  min-height: 40px;
+}
+.concessionaire-search_select .css-ack04v-control {
+  background-color: transparent;
+  border: 1px solid #fff;
+}
+.concessionaire-search__select-container .custom-select [class*="-control"] {
+  background-color: transparent !important;
+  border: 1px solid #fff !important;
+}
+.concessionaire-search_select .css-tj5bde-Svg {
+  fill: #fff;
+}
+.concessionaire-search_select .css-1n6g186-placeholder {
+  color: #fff;
+}
+.concessionaire-search_select .css-1qrxvr1-singleValue {
+  color: #fff;
+}
+.concessionaire-search_select .css-hlgwow {
+  margin-left: 14px;
+}
+.concessionaire-search_select .css-1rddi7f-indicatorContainer,
+.concessionaire-search_select .css-3dny8r-indicatorContainer {
+  padding: 8px 16px;
+}
+.concessionaire-search__button {
+  width: 175px;
+  padding: 0;
+  margin-top: 10px;
+  min-height: 40px;
+  @media (width >= 1024px) {
+    margin-top: 20px;
+  }
+}
+@media (width >= 1520px) {
+  .concessionaire-search .Card {
+    background-image: url("/images/ConcessionaireSearch--bg-desktop.png");
+  }
+}

@@ -1,0 +1,27 @@
+.lightbox {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: #000;
+  z-index: 999999;
+}
+
+.close {
+  position: absolute;
+  z-index: 9999999;
+  filter: brightness(0) invert(1);
+}
+
+.info {
+  position: absolute;
+  z-index: 9999999;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  img {
+    filter: brightness(0) invert(1);
+  }
+}

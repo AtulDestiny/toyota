@@ -1,0 +1,46 @@
+.mericico-logo-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 60px 0;
+}
+
+.mericico-logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 944px;
+  gap: calc(944px - (569px + 217px)); /* remaining gap */
+}
+
+/* Desktop sizes */
+.logo-first {
+  width: 569px;
+  height: auto;
+}
+
+.logo-second {
+  width: 217px;
+  height: auto;
+}
+
+/* Mobile view */
+@media (max-width: 1024px) {
+  .mericico-logo-container {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 56px;
+  }
+
+  .logo-first {
+    width: 100%;
+    max-width: 304px !important;
+  }
+
+  .logo-second {
+    width: 100%;
+    max-width: 143px !important;
+  }
+}

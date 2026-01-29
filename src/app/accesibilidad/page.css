@@ -1,0 +1,9 @@
+.vin-input {
+  &:focus {
+    border: 1px solid #fff;
+    box-shadow: none;
+  }
+  &::placeholder {
+    color: white;
+  }
+}

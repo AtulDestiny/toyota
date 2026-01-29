@@ -1,0 +1,25 @@
+.vehicles-card-list {
+  .custom-pagination {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(2rem, 1fr));
+    grid-auto-rows: 0.1869rem;
+    gap: 0.3887rem;
+    justify-content: center;
+  }
+
+  .swiper-pagination-bullet {
+    width: 100%;
+    height: 100%;
+    border-radius: 2.5rem;
+    margin: 0 !important;
+  }
+
+  .swiper-pagination-bullet-active {
+    background-color: black;
+  }
+}
+
+
+/* .arrowCustombgBlack--prev , .arrowCustombgBlack--next{
+  background-color: black !important;
+} */

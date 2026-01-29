@@ -1,0 +1,42 @@
+.formContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  label {
+    font-weight: 400;
+    color: white;
+    font-size: 18px;
+    font-family: var(--font-ToyotaType-Regular);
+  }
+
+  input,
+  select {
+    padding: 10px 20px;
+    border: 1px solid #ddd;
+    border-radius: 80px;
+    font-size: 14px;
+    height: 40px;
+    font-family: var(--font-ToyotaDisplay);
+
+    &:focus {
+      outline: none;
+      border-color: #ffffff;
+      box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+    }
+  }
+
+  select {
+    background-color: white;
+  }
+}

@@ -1,0 +1,143 @@
+/* checkbox */
+.amplify-checkbox__icon {
+  background-color: black;
+  color: transparent;
+}
+
+.amplify-checkbox__button::before {
+  border-color: #58595b !important;
+  border-width: 1px !important;
+  width: 14px !important;
+  height: 14px !important;
+}
+.amplify-checkbox__icon--checked {
+  width: 14px !important;
+  height: 14px !important;
+}
+.amplify-checkbox__icon--checked svg {
+  color: #000 !important;
+}
+.amplify-scrollview {
+  width: 100%;
+  overflow: visible !important;
+}
+
+.amplify-accordion {
+  background-color: transparent;
+}
+
+/* Open/Close filter */
+.filter-panel {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  /* Estado cerrado */
+  opacity: 0;
+  width: 100%;
+  min-height: 100vh;
+  padding: 1.0625rem 2.5rem;
+  transition: all 0.3s ease-in-out;
+  /* Transición suave */
+}
+
+.filter-panel.open {
+  left: 0;
+  /* Estado abierto */
+  opacity: 1;
+}
+
+.filter-panel.closed {
+  left: -100%;
+  opacity: 0;
+}
+
+@media (width >=1250px) {
+  .filter-panel {
+    position: static;
+  }
+}
+
+@media (width <1250px) {
+  .filter-panel.open {
+    z-index: 9999999;
+  }
+}
+
+/* Input Slider */
+.noUi-horizontal {
+  height: 5px !important;
+}
+.noUi-base {
+  height: 4px !important;
+  margin-top: -1px !important;
+  background-color: #e0e0e0;
+  border: 0px !important;
+  box-shadow: none !important;
+  min-width: 218px;
+}
+
+.noUi-handle {
+  width: 24px !important;
+  height: 24px !important;
+  border-radius: 50% !important;
+  top: -12px !important;
+
+  /* White */
+  background: #ffffff;
+  /* Gris claro 2 */
+  border: 1px solid #e0e0e0 !important;
+  box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.1) !important;
+}
+
+.noUi-connect {
+  background: #000 !important;
+}
+
+.range {
+  padding-left: 0.4rem;
+  margin: 1rem 0px;
+  max-width: 218px;
+  margin-bottom: 15px;
+}
+
+.noUi-handle:before,
+.noUi-handle:after {
+  content: none !important;
+}
+
+/* Inputs */
+.minInput,
+.maxInput {
+  font-size: 12px;
+  display: flex;
+  width: 92px;
+  height: 46px;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: 1px solid #000;
+  padding: 15px 10px;
+  font-style: normal;
+  line-height: 100%;
+  letter-spacing: 0px;
+  font-family: var(--font-ToyotaType-Regular);
+  vertical-align: middle;
+}
+
+.amplify-accordion__item__trigger:hover {
+  background-color: transparent;
+}
+
+.amplify-accordion__item__trigger:focus {
+  box-shadow: none;
+}
+
+.filter__item .amplify-checkbox__button--focused::before {
+  outline: none;
+  box-shadow: none;
+}
+
+.noUi-touch-area {
+  min-width: 24px;
+  min-height: 24px;
+}

@@ -1,0 +1,47 @@
+.all-vehicles-cars-grid {
+  .css-6ol87r-indicatorContainer {
+    padding: 0.3125rem;
+  }
+
+  .css-4tobca-control:hover {
+    border-color: black;
+  }
+
+  .all-vehicles-cars-grid__sort {
+    .css-4tobca-control {
+      padding: 0.4063rem 0.625rem 0.4063rem 0.125rem;
+    }
+
+    .all-vehicles-cars-grid__sort {
+      max-width: 162px !important;
+      height: 40px !important;
+    }
+    .css-6ol87r-indicatorContainer {
+      padding: 0;
+    }
+
+    .css-pjbozy-menu {
+      width: 210px !important;
+    }
+    @media (min-width: 640px) and (max-width: 1023px) {
+      .css-pjbozy-menu {
+        width: 230px !important;
+        height: 215px !important;
+      }
+    }    
+    .custom-select-wrapper select option {
+      font-size: 10px;
+    }
+
+    .all-vehicles-cars-grid__sort select option {
+      font-size: 05px;
+    }
+
+    .css-12l5x66-control {
+      height: 40px !important;
+    }
+    .css-hlgwow {
+      padding-right: 0;
+    }
+  }
+}

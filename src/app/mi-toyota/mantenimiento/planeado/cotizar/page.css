@@ -1,0 +1,50 @@
+.vehicles-tabs {
+  .swiper {
+    z-index: unset;
+  }
+  .swiper-wrapper {
+    display: grid;
+    grid-auto-flow: column;
+    z-index: unset;
+  }
+}
+
+.tabs__item {
+  border-bottom-width: 4px;
+  --amplify-components-tabs-item-border-color: #e0e0e0 !important;
+  --amplify-components-tabs-item-active-border-color: #000000 !important;
+}
+
+.vehicles-slide {
+  display: flex;
+  justify-content: center;
+}
+@media (min-width: 640px) {
+  .vehicles-slide {
+    display: block;
+    width: auto;
+  }
+}
+
+.arrowCustom {
+  width: 3.4375rem;
+  padding: 10px 15px 18px;
+  border-radius: 20px;
+  background-color: #000000;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 15%;
+}
+
+.amplify-accordion__item__trigger:hover {
+  background-color: transparent;
+}
+
+.amplify-accordion__item__trigger:focus {
+  box-shadow: none;
+}
+
+.filter__item .amplify-checkbox__button--focused::before {
+  outline: none;
+  box-shadow: none;
+}
