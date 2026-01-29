@@ -1,0 +1,2 @@
+export const TOKEN_SECRET = "ItSry30SEviCPSmiSu1rvC7XoYexzeiVzxX5Wu6RiuwMmH65y7fCY861W4eo4PtqQSWjf6I3cYt5BUfc2rFtfe82ahsCeLeFr26SCWxzUE82QphsMOukkZP5QSjL"
+export const AGENT_MOTOR_URL = 'https://apipro.agentemotor.com/seguros/co/vehicles/consultar/vehiculos-por-caracteristica';
