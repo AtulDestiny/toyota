@@ -1,0 +1,252 @@
+Frontend Development Best Practices Manual for Next.js with AWS Amplify UI
+
+1. Core Principles
+
+Consistency: All components must follow the same design and coding patterns
+Reusability: Components should be modular and configurable via props
+Accessibility: Comply with WCAG 2.1 using Amplify UI's built-in accessibility features
+Performance: Optimize rendering and resource loading
+Type Safety: Full TypeScript implementation for all components
+
+2. AWS Amplify UI Components Usage
+
+2.1 General Guidelines
+
+Prefer Amplify UI components over custom implementations
+Extend styles using className rather than overriding base styles
+Maintain visual consistency using Amplify's design system
+Avoid CSS files unless absolutely necessary (use styled components or style props)
+
+2.2 Recommended Component Pattern (based on VehicleCard)
+
+import React from "react";
+import { 
+  View, 
+  Flex, 
+  Text, 
+  Image, 
+  Divider, 
+  Link,
+  Grid 
+} from "@aws-amplify/ui-react";
+import "@aws-amplify/ui-react/styles.css";
+
+// Types in separate section
+interface VehicleCardProps {
+  id: string;
+  index?: number;
+  theme?: 'dark' | 'light';
+  name: string;
+  year: string;
+  type: string;
+  price: string;
+  description: string;
+  img: string;
+  className?: string;
+  style?: React.CSSProperties;
+}
+
+const DARK_COLORS = ["#1F2C40", "#29363A", "#161B1E"];
+
+export const VehicleCard = ({
+  id,
+  index = 0,
+  theme = 'dark',
+  name,
+  year,
+  type,
+  price,
+  description,
+  img,
+  className = '',
+  style
+}: VehicleCardProps) => {
+  const selectedDarkColor = DARK_COLORS[index % DARK_COLORS.length];
+  
+  return (
+    <Grid
+      key={id}
+      minWidth={{ base: "18.875rem", xl: "44.1875rem" }}
+      minHeight={{ base: "auto", xl: "100%" }}
+      backgroundColor={theme === 'dark' ? selectedDarkColor : "#ffffff"}
+      color={theme === 'dark' ? "#ffffff" : "#000000"}
+      boxShadow="medium"
+      borderRadius=".5rem"
+      padding={{ base: "1.25rem .9375rem", xl: "0" }}
+      templateColumns={{ xl: "auto 1fr" }}
+      className={`vehicle-card ${className}`}
+      style={style}
+      role="article"
+      aria-labelledby={`vehicle-title-${id}`}
+    >
+      {/* Component content */}
+    </Grid>
+  );
+};
+
+3. Specific Best Practices
+
+3.1 Styling Approach
+
+Amplify style props: Primary styling method
+CSS-in-JS: For complex styles, use style prop with objects
+Responsive design: Use Amplify's responsive props
+Constants: Define reusable style values as constants
+
+const CARD_STYLES = {
+  base: {
+    minWidth: "18.875rem",
+    padding: "1.25rem .9375rem"
+  },
+  xl: {
+    minWidth: "44.1875rem",
+    padding: 0
+  }
+};
+
+// Usage
+<Grid
+  minWidth={{ base: CARD_STYLES.base.minWidth, xl: CARD_STYLES.xl.minWidth }}
+  padding={{ base: CARD_STYLES.base.padding, xl: CARD_STYLES.xl.padding }}
+>
+
+3.2 Props and Typing
+
+Interfaces: Define for all component props
+Default props: Provide sensible defaults
+Documentation: JSDoc for complex props
+
+interface VehicleCardProps {
+  /**
+   * Unique identifier for accessibility
+   */
+  id: string;
+  /**
+   * Visual theme variant
+   * @default 'dark'
+   */
+  theme?: 'dark' | 'light';
+  /**
+   * Vehicle name to display
+   */
+  name: string;
+  // ...
+}
+
+3.3 Responsive Implementation
+
+<Flex
+  direction={{ base: "column", medium: "row" }}
+  gap={{ base: "1rem", large: "2rem" }}
+  alignItems={{ base: "center", medium: "flex-start" }}
+>
+
+3.4 Accessibility Standards
+
+Semantic HTML: Proper use of HTML5 elements
+ARIA attributes: When needed for complex components
+Keyboard navigation: Ensure all interactive elements are focusable
+
+4. Code Conventions
+
+Naming:
+
+Components: PascalCase (VehicleCard)
+Props: camelCase
+Constants: UPPER_SNAKE_CASE
+Structure:
+Group related imports (external > internal)
+Alphabetical props ordering
+Type definitions near component
+
+Documentation:
+
+JSDoc for complex logic
+PropType comments
+
+5. Performance Optimization
+
+Memoization:
+
+export const MemoizedCard = React.memo(VehicleCard);
+
+Dynamic Imports:
+
+const HeavyComponent = dynamic(() => import('./HeavyComponent'), { ssr: false });
+
+Image Optimization:
+
+import Image from 'next/image';
+
+<Image 
+  src={img} 
+  alt={name}
+  width={500}
+  height={300}
+  priority={false}
+/>
+
+6. Amplify UI Component Styling Example
+
+import { Card, Flex, Heading, Text, Button } from "@aws-amplify/ui-react";
+
+const cardStyles = {
+  borderRadius: 'medium',
+  padding: '1.5rem',
+  boxShadow: 'medium',
+  backgroundColor: 'var(--amplify-colors-background-primary)'
+};
+
+const titleStyles = {
+  fontSize: '1.25rem',
+  fontWeight: 600,
+  color: 'var(--amplify-colors-font-primary)'
+};
+
+export const ProductCard = ({ product }) => (
+  <Card variation="outlined" style={cardStyles}>
+    <Flex direction="column" gap="1rem">
+      <Heading level={4} style={titleStyles}>
+        {product.name}
+      </Heading>
+      <Text className="product-description">
+        {product.description}
+      </Text>
+      <Button variation="primary">
+        View Details
+      </Button>
+    </Flex>
+  </Card>
+);
+
+7. Component Organization
+
+Each component must:
+
+Be self-contained with all related files in its directory
+Include an index.ts for clean imports
+Follow the pattern:
+components/
+  VehicleCard/
+    VehicleCard.tsx      # Main component
+    VehicleCard.types.ts # Type definitions
+    VehicleCard.test.tsx # Tests
+    index.ts            # Public exports
+
+8. Testing Requirements
+
+Unit Tests: Jest + React Testing Library
+Snapshot Tests: For UI consistency
+Interaction Tests: For complex components
+
+Example test:
+
+import { render, screen } from '@testing-library/react';
+import { VehicleCard } from './VehicleCard';
+
+describe('VehicleCard', () => {
+  it('renders vehicle name', () => {
+    render(<VehicleCard id="1" name="Test Vehicle" {...mockProps} />);
+    expect(screen.getByText('Test Vehicle')).toBeInTheDocument();
+  });
+});
